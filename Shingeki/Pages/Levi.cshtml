@@ -1,0 +1,76 @@
+﻿@page
+@model Shingeki.Pages.LeviModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levi - Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            padding: 50px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Contenedor del video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .message {
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        /* Imagen de Levi a la derecha */
+        .levi-image {
+            position: fixed;
+            right: 10px; /* Ajusta la distancia desde el borde derecho */
+            bottom: 10px; /* Ajusta la distancia desde el borde inferior */
+            max-width: 40%; /* Ajusta el tamaño de la imagen */
+            height: auto;
+            border-radius: 10px; /* Opcional para bordes redondeados */
+            z-index: 1; /* Asegura que la imagen no cubra el texto */
+        }
+    </style>
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="/videos/shingeki-background.mp4" type="video/mp4"> <!-- Ruta local -->
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <!-- Imagen de Levi a la derecha -->
+    <img src="/images/levi-ackerman.png" alt="Levi Ackerman" class="levi-image" />
+
+    <!-- Mensaje de cumpleaños -->
+    <div class="message">
+        <p>Feliz cumpleaños gordita, se que estos ultimos años hemos tenido mucha confianza, alegria y bueno de todo un poco jeje, espero que te vaya bien y aprendas mucho de la vida, mas tardecita ya festejaremos alguito jeje</p>
+    </div>
+
+    <!-- Reproducción del sonido del opening -->
+    <audio autoplay>
+        <source src="/audio/opening.mp3" type="audio/mp3"> <!-- Ruta local -->
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+</body>
+</html>

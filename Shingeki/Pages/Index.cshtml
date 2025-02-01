@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "feliz cumpleaños";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('/images/shingeki-background.jpg'); /* Ruta local */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px;
+            margin: 0;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .button {
+            padding: 20px;
+            font-size: 18px;
+            background-color: #3b3b3b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #ff3333;
+            }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños MELANYYYYY!</h1>
+    <p>Haz click en el botoncito para una sorpresita jeje:</p>
+    <button class="button" onclick="location.href='@Url.Page("/Levi")'">Haz click aqui MELAAA</button>
+</body>
+</html>
